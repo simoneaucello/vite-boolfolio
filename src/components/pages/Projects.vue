@@ -1,14 +1,56 @@
 <script>
+import axios from 'axios';
+import { store } from '../../data/store';
+import ProjectCard from '../partials/ProjectCard.vue';
 export default {
  name: 'Projects',
-  
-};
+ components:{
+  ProjectCard
+ },
+
+
+ data(){
+   return{
+    store,
+    projects:[]
+ 
+   }
+ },
+
+ methods:{
+  getApi(){
+    axios.get(store.apiUrl)
+    .then(result => {
+      this.projects = result.data.data
+      console.log(this.projects);
+    })
+    .catch(error => {
+      console.log(error.message);
+    })
+  }
+ },
+
+ mounted(){
+  this.getApi();
+ }
+}
+
 </script>
 
 <template>
   <div class="container my-5">
     <h1>I miei progetti</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum soluta quo vitae, impedit aperiam enim corporis iure, voluptate, ipsa natus quas blanditiis similique doloremque velit cupiditate quidem magnam tenetur nulla neque maxime expedita quaerat delectus architecto itaque! Vitae omnis quos excepturi illo sit dolore molestiae magni, odio autem molestias modi!</p>
+
+    <div class="d-flex">
+      <ProjectCard 
+    v-for="project in projects"
+    :key="project.id"
+    :projectObj="project"
+    />
+
+    </div>
+   
+
 
   </div>
 </template>
