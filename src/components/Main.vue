@@ -15,6 +15,8 @@ import {store} from '../data/store'
 
 <template>
 
+<router-view></router-view>
+
 </template>
 
 

@@ -24,7 +24,8 @@ import Footer from './components/Footer.vue'
 <template>
   <div>
 
-  <Header />
+      <Header />
+  
   <Main />
   <Footer />
 
