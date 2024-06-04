@@ -29,9 +29,9 @@
    </span>
 
  </div>
-        <!-- <div>
-          <a href="#" class="btn btn-dark text-white mt-3">Dettagli</a>
-        </div> -->
+        <div>
+          <router-link :to="{name: 'projectDetails', params:{slug: projectObj.slug}}" class="btn btn-dark text-white mt-3">Dettagli</router-link>
+        </div>
     
   </div>
 </div>
