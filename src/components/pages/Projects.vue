@@ -54,21 +54,6 @@ export default {
           }
           console.log(this.technologies);
 
-
-          // if(type === 'posts' || type == ''){
-
-          //   this.posts = result.data.data
-          //   this.paginatorData.current_page = result.data.current_page;
-          //   this.paginatorData.links = result.data.links;
-          //   this.paginatorData.total = result.data.total;
-          // }else if(type === 'categories'){
-          //   this.categories = result.data
-          //   console.log(this.categories);
-          // }else{
-          //   this.tags = result.data
-
-          // }
-        
         })
         .catch( error => {
           this.loading = false;
@@ -109,7 +94,7 @@ export default {
       <h4>Tecnologie:</h4>
       <div class="inner">
   
-        <span v-for="technology in technologies" :key="`c-${technology.id}`" class="badge bg-warning text-dark m-2"> {{ technology.name }} </span>
+        <span v-for="technology in technologies" :key="`c-${technology.id}`" class="badge bg-success text-white m-2"> {{ technology.name }} </span>
     </div>
     
   </div>
@@ -118,7 +103,7 @@ export default {
       <h4>Tipologie:</h4>
       <div class="inner">
   
-        <span v-for="typee in types" :key="`c-${typee.id}`" class="badge bg-success text-white m-2"> {{ typee.name }} </span>
+        <span v-for="typee in types" :key="`c-${typee.id}`" class="badge bg-warning text-dark m-2"> {{ typee.name }} </span>
     </div>
     
   </div>

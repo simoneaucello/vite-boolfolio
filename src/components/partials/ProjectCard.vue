@@ -9,7 +9,9 @@
 <template>
 
 <div class="card mt-3 p-3" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img :src="`http://127.0.0.1:8000${projectObj.image}`" class="card-img-top" alt="...">
+
+  
   <div class="card-body">
     <h5 class="card-title">{{ projectObj.title }}</h5>
     <p class="card-text">{{ projectObj.description }}</p>

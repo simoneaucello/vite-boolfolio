@@ -83,10 +83,10 @@ import Loader from '../partials/Loader.vue';
     <div v-if="!loading" class="project">
     <h1>  {{ project.title }} </h1>
 
-    <img :src="project.image">
+    <img :src="`http://127.0.0.1:8000${project.image}`">
     <p class="caption"> {{ project.image_original_name }} </p>
-     <p>Tipologia: <br> <span  class="badge text-bg-success me-2"> {{ type }}</span></p>
     <p>Tecnologie: <br> <span  class="badge text-bg-warning me-2"> {{ technologies }}</span></p>
+     <p>Tipologia: <br> <span  class="badge text-bg-success me-2"> {{ type }}</span></p>
     <p class="d-block">{{ formattedDate }}</p>
     
     
