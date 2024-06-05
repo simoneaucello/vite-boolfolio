@@ -12,7 +12,7 @@ import Loader from '../partials/Loader.vue';
     data(){
       return{
         name: 'Simone',
-        email: 'info@auce.it',
+        email: 'info@auce.com',
         message: 'Ciao!',
         sending: false,  
         sent: false,
@@ -27,7 +27,6 @@ import Loader from '../partials/Loader.vue';
     methods: {
       sendEmail(){
         this.sending = true;
-        console.log('send email');
         const data = {
           name: this.name,
           email: this.email,
