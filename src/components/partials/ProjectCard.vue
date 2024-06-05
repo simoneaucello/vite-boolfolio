@@ -9,7 +9,7 @@
 <template>
 
 <div class="card mt-3 p-3" style="width: 18rem;">
-  <img :src="`http://127.0.0.1:8000${projectObj.image}`" class="card-img-top" alt="...">
+  <img :src="projectObj.image" class="card-img-top" alt="...">
 
   
   <div class="card-body">

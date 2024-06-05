@@ -103,7 +103,7 @@ export default {
       <h4>Tipologie:</h4>
       <div class="inner">
   
-        <span v-for="typee in types" :key="`c-${typee.id}`" class="badge bg-warning text-dark m-2"> {{ typee.name }} </span>
+        <router-link :to="{name:'typeProjects', params:{slug:typee.slug}}" v-for="typee in types" :key="`c-${typee.id}`" class="badge bg-warning text-dark m-2"> {{ typee.name }} </router-link>
     </div>
     
   </div>
